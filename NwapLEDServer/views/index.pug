@@ -1,0 +1,47 @@
+doctype html
+html
+  head
+    title NWAP
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // Include Required Prerequisites
+    script(type='text/javascript', src='http://cdn.jsdelivr.net/jquery/1/jquery.min.js')
+    link(rel='stylesheet', type='text/css', href='http://cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css')
+    link(rel='stylesheet', type='text/css', href='https://formden.com/static/cdn/bootstrap-iso.css')
+    // Include ui styles
+    link(rel='stylesheet', href='https://www.w3schools.com/w3css/4/w3.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Raleway')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(rel='stylesheet', href='stylesheets/ui.css')
+    // Include socket.io
+    script(src='/socket.io/socket.io.js')
+    // Include JS files
+    script(type='text/javascript', src='javascripts/client-socket.js')
+
+  body.w3-light-grey
+    // Top container
+    .w3-bar.w3-top.w3-black.w3-large(style='z-index:4')
+      button.fa.fa-navicon(onclick='w3_open();', style ='color: white; background-color: black; margin-top: 10px; margin-left: 10px;')
+
+    nav#mySidebar.w3-sidebar.w3-collapse.w3-white.w3-animate-left(style='z-index:3;width:300px;')
+        .w3-container.w3-row
+            .w3-col.s8.w3-bar
+                h4#currentDashboard2
+        hr
+        .w3-bar-block
+            //input(type='button', value='Logout', onclick='logout()')
+
+    // Overlay effect when opening sidebar on small screens
+    #myOverlay.w3-overlay.w3-hide-large.w3-animate-opacity(onclick='w3_close()', style='cursor:pointer', title='close side menu')
+      // !PAGE CONTENT!
+    .w3-main(style='margin-left:300px;margin-top:43px;')
+      header.w3-container(style='padding-top:22px')
+        h4
+          b
+            i.fa.fa-wifi
+            |  Current State&ensp;
+
+            a#currentState
+
+        #stateText.statePlaceholder(style='width: 100%; height: 100%;')
+
