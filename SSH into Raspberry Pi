@@ -1,0 +1,26 @@
+SSH into Raspberry Pi
+
+Run this on Raspberry Pi and get the IP address
+	- ifconfig
+
+Run the following commnad in your linux or mac
+	- ssh pi@<ip-address>
+
+When prompted, use password 'raspberry'
+
+
+--------
+
+Installing python, GPIO and Vim
+
+	sudo apt-get install python-dev
+	curl -O https://bootstrap.pypa.io/get-pip.py
+	sudo python get-pip.py
+	sudo pip install virtualenv
+
+	pip install rpi.gpio
+
+	sudo apt-get install vim
+
+----
+
